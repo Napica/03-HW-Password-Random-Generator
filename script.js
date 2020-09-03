@@ -17,12 +17,9 @@ function generatePassword() {
     "How many characters would you like the password to be?"
   );
 
-  if (
-    isNaN(checkPasswordLength) ||
-    checkPasswordLength < 8 ||
-    checkPasswordLength > 128
-  ) {
-    alert("Please choose a number between 8 and 128.")(generatePassword());
+  if (checkPasswordLength < 8 || checkPasswordLength > 128) {
+    alert("Please choose a number between 8 and 128.");
+    generatePassword();
   } else {
     var upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     var passwordUpperCase = confirm(
@@ -35,7 +32,7 @@ function generatePassword() {
   }
 
   for (var i = 0; i < checkPasswordLength; i++) {
-    var random = Math.floor(Math.random() + password.length);
+    var random = Math.floor(Math.random() * password.length);
     newPassword = newPassword + password[random];
   }
 
