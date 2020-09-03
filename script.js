@@ -10,15 +10,17 @@ function writePassword() {
 }
 
 function generatePassword(onclick = "generateBtn") {
+  var storedPassword = ""
+  var newPassword = "";
 
-  var passwordNumbers = confirm("Would you like to include numbers?");
-  if (passwordNumbers === true) {
-    for (var i = 0; i < 10; i++) {
-      var passwordNumbers = Math.floor(Math.random() * 10) - 1;
+  var checkPasswordLength = prompt("How many characters would you like the password to be?")
+    if ((isNaN(checkPasswordLength)) || (checkPasswordLength < 8) || checkPasswordLength > 128) {
+      alert("Please choose a number between 8 and 128.")
+      (generatePassword());
+    } else {
+      alert("null");
     }
   }
-  return ;
-}
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
