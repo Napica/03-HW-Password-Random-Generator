@@ -39,6 +39,14 @@ function generatePassword() {
     }
   }
 
+  var numbers = "123456789";
+  var passwordNumbers = confirm("Would you like the password to have numbers?");
+  if (passwordNumbers == true) {
+    password = password + numbers;
+  }
+
+
+
   for (var i = 0; i < checkPasswordLength; i++) {
     var random = Math.floor(Math.random() * password.length);
     newPassword = newPassword + password[random];
