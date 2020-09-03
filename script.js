@@ -29,6 +29,14 @@ function generatePassword() {
     if (passwordUpperCase == true) {
       password = password + upperCase;
     }
+
+    var lowerCase = "abcdefghijklmnopqrstuvwxyz";
+    var passwordLowerCase = confirm(
+      "Would you like the password to have lower case letters?"
+    );
+    if (passwordLowerCase == true) {
+      password = password + lowerCase;
+    }
   }
 
   for (var i = 0; i < checkPasswordLength; i++) {
