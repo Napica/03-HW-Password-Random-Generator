@@ -20,7 +20,7 @@ function generatePassword() {
   if (checkPasswordLength < 8 || checkPasswordLength > 128) {
     alert("Please choose a number between 8 and 128.");
     generatePassword();
-  } else {
+  } else if (checkPasswordLength > 8 || checkPasswordLength < 128) {
     // this allowes the user to choose to use uppercase letters
     var upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     var passwordUpperCase = confirm(
@@ -54,11 +54,25 @@ function generatePassword() {
     password = password + characters;
   }
 
+  //Prompts the user to restart if they do not choose anything.  
+  if (
+    passwordLowerCase == false &&
+    passwordUpperCase == false &&
+    passwordNumbers == false &&
+    passwordCharacters == false
+  ) {
+    var resetQuestion = confirm("Would you like to start again?");
+    if (resetQuestion == true) {
+      return "";
+    } else {
+      return "";
+    }
+  }
+
   for (var i = 0; i < checkPasswordLength; i++) {
     var random = Math.floor(Math.random() * password.length);
     newPassword = newPassword + password[random];
   }
-
   return newPassword;
 }
 
