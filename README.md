@@ -17,7 +17,7 @@ The purpose of this application is to allow the user to create a randomly genera
 **To edit/use the application, please follow the steps to pull the repository from GitHub through Git Bash and pull the script into VSCode, provided all three items are already installed on a local network.**
 
 Instillation steps are as follows:
-1. Access the repository at [Git Hub] https://github.com/Napica/HW-02-Get-to-know-portfolio. 
+1. Access the repository at [Git Hub] https://github.com/Napica/HW-03-Password-Random-Generator. 
 2. Click on the code section (in green) and clone the SSH key.  
 3. Once the SSH key is cloned, open the terminal through Git Bash.
 4. Find or create the folder the user wants to work in and enter the following commands the the Git terminal:
